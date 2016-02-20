@@ -1,4 +1,7 @@
 extends layout
 block main-content
+    a(href="chat") Chat Room
     div(ng-controller='MainCtrl')
-      h1 Hello, {{name}}
+        input(type='text', ng-model='name')
+        input(type='submit', value='Join', ng-click='join()')
+
