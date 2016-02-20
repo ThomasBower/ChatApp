@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/ThomasBower/ChatApp",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "confidence": "^1.4.2",
     "express": "^4.13.4",
+    "jade": "^1.11.0",
     "socket.io": "^1.4.5"
   }
 }
