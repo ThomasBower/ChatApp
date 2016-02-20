@@ -1,31 +1,31 @@
 doctype
-html(ng-cloak)
+html
   head
     title Chat App
     base(href='/')
 
     include styles
 
-  body
-  
+  body(ng-app='gameChat')
+
     header
       nav#top-nav.cyan
         .nav-wrapper
           a.brand-logo(href='#') Our Chat App
           .right.hide-on-med-and-down.medium
             i.tiny.material-icons.left.yellow-text grade
-            strong 3000 
+            strong 3000
             | Points
 
     main
       block main-content
-    
+
     footer#main-footer.page-footer
       .nav-wrapper.footer-copyright.grey.lighten-3.grey-text.text-darken-2
-        | Produced hastily at 
+        | Produced hastily at
         a(href='http://ichack.org') ICHack 2016
-        .right 
-          a(href='http://github.com/ThomasBower/ChatApp') Github 
+        .right
+          a(href='http://github.com/ThomasBower/ChatApp') Github
           | &bull; &copy; 2016
 
     include scripts

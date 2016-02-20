@@ -22,7 +22,7 @@ app.use(bodyParser.json())
 app.use('/assets', express.static('./public'))
 
 // VIEWS
-app.get('/:view', function(req, res, next){
+app.get('/:view', function(req, res, next) {
     res.render(req.params.view)
 })
 app.get('/', function(req, res, next) {
@@ -35,7 +35,9 @@ app.get('/', function(req, res, next) {
 io.on('connection', require('./controllers').Socket(io))
 
 function start() {
-    app.listen(app.get('port'))
+    server.listen(app.get('port'), function() {
+        console.log('Express server listening on port ' + app.get('port'));
+    });
 }
 
 module.exports = {
