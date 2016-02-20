@@ -35,7 +35,7 @@ module.exports = function(io, socket) {
         messages.push(message)
         console.log(messages)
 
-        io.in(message.room).emit('new message', message)
+        io.emit('new message', message)
         // post: add new message to db
     })
 }

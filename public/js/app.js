@@ -1,4 +1,4 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
-var app = angular.module('gameChat', []);
+// Declare app level module
+var app = angular.module('gameChat', [])
