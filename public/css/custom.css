@@ -1,0 +1,21 @@
+.nav-wrapper {
+  padding: 0 30px;
+}
+
+#top-nav .right {
+  font-size: 1.3em;
+}
+
+#main-footer {
+  padding-top: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
