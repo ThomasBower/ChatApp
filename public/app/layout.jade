@@ -1,13 +1,20 @@
 doctype
 html(ng-cloak)
-    head
-        title Chat App
-        base(href='/')
+  head
+    title Chat App
+    base(href='/')
 
-        include styles
+    include styles
 
-    body
+  body
+  
+  nav
+    #nav-wrapper
+      a.brand-logo(href='#')
+      ul#nav-mobile.right.hide-on-med-and-down
+        li
+          a(href='#') Test
 
-        block main-content
+  block main-content
 
-        include scripts
+  include scripts
