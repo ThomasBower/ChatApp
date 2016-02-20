@@ -33,3 +33,17 @@ main .row {
 main .row .col {
   height: 100%;
 }
+
+#chat {
+  padding-left: 30px;
+}
+
+#chat > ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+#chat > ol li {
+  line-height: 1.8em;
+  font-size: 1.2em;
+}
