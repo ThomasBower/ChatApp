@@ -1,20 +1,15 @@
 extends layout
 block main-content
-  .row
-    .col.s8#chat
+  .row.under-header
+    .col.s8#chat(ng-controller='ChatCtrl')
       ol
-        - for (var x = 0; x < 6; x++)
-          li.chip.left
-            strong.cyan-text Alessandro: 
-            | Hello there, my name is Ale
-          li.chip.left
-            strong.cyan-text Paul: 
-            | My name is Paul. Nice to meet you o/
-          li.chip.right.cyan.white-text Hi lads!
+          li.chip(ng-repeat='message in messages', ng-class='message.sender == name ? \'right.cyan\' : \'left\' ')
+            strong.cyan-text {{message.sender}}:
+            | {{message.text}}
       #input-area.row.white
         .input-field.col.s10
-          textarea.materialize-textarea(placeholder='Enter your message here')
+          textarea.materialize-textarea(placeholder='Enter your message here', ng-model='text')
         .input-field.col.s2
-          input.btn.waves-effect.waves-light.cyan(type='submit', value='Send')
-        
+          input.btn.waves-effect.waves-light.cyan(type='submit', value='Send', ng-click='sendMessage()')
+
     .col.s4.grey.lighten-5 Game section
