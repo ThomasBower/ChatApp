@@ -24,7 +24,7 @@ app.use('/assets', express.static('./public'))
 // VIEWS
 app.get('/*', function(req, res, next) {
     // Render app index jade view
-    res.render('index');
+    res.render('index')
 })
 
 
