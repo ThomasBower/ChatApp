@@ -32,9 +32,11 @@ main > .row {
 
 main > .row > .col {
   height: 100%;
+  box-sizing: border-box;
 }
 
 #chat {
+  height: 100%;
   padding: 0 0 100px;
   overflow-x: hidden;
   position: relative;
@@ -43,10 +45,14 @@ main > .row > .col {
 #chat > ol {
   margin: 0;
   padding: 0 30px;
-  max-height: calc(100vh - 214px);
   width: 100%;
   overflow-y: scroll;
   list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100px;
 }
 
 #chat > ol li {
