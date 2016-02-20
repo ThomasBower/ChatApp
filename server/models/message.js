@@ -1,10 +1,13 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose'),
+    ObjectId = mongoose.Schema.Types.ObjectId;
 
-var chatSchema = mongoose.Schema({
+var messageSchema = mongoose.Schema({
     created: Date,
-    content: String,
-    username: String,
-    room: String
+    text: String
+    user: {
+        type: ObjectId,
+        ref: 'User'
+    }
 })
 
-module.exports = mongoose.model('Chat', chatSchema)
+module.exports = mongoose.model('Message', messageSchema)

@@ -3,6 +3,11 @@ var chatModels = require('../../models')
 module.exports = function(io, socket) {
     socket.on('new user', function(user){
         // pre: user.name
+        var userEntry = new User(user);
+
+        userEntry.save(function(err, user){
+            //io.emit('new user', user)
+        })
         // post: add new user to db
     })
 
