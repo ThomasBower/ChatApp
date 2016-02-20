@@ -25,17 +25,19 @@ main {
   flex: 1 0 auto;
 }
 
-main .row {
+main > .row {
   margin-bottom: 0;
   height: 100%;
 }
 
-main .row .col {
+main > .row > .col {
   height: 100%;
 }
 
 #chat {
-  padding-left: 30px;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0 30px;
 }
 
 #chat > ol {
@@ -51,3 +53,27 @@ main .row .col {
   clear: both;
   margin-bottom: 5px;
 }
+
+#chat textarea {
+  margin: 0;
+  padding: 0;
+  border-bottom-width: 0;
+}
+
+#chat .s10 {
+  padding: 0 30px;
+}
+
+#input-area {
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.16);
+  /*outline: 1px solid red;*/
+}
+
+#input-area input[type=submit] {
+  width: 100%;
+} 
