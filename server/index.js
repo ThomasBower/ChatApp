@@ -22,14 +22,17 @@ app.use(bodyParser.json())
 app.use('/assets', express.static('./public'))
 
 // VIEWS
-app.get('/*', function(req, res, next) {
+app.get('/:view', function(req, res, next){
+    res.render(req.params.view)
+})
+app.get('/', function(req, res, next) {
     // Render app index jade view
     res.render('index')
 })
 
 
 // SOCKET.IO COMMUNICATION
-// io.on('connection', require(<path to socketio core>))
+io.on('connection', require('./controllers').Socket(io))
 
 function start() {
     app.listen(app.get('port'))
