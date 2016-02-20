@@ -3,8 +3,8 @@ block main-content
   .row.under-header
     .col.s8#chat(ng-controller='ChatCtrl')
       ol
-          li.chip(ng-repeat='message in messages', ng-class='message.sender == name ? \'right.cyan\' : \'left\' ')
-            strong.cyan-text {{message.sender}}:
+          li.chip(ng-repeat='message in messages', ng-class='message.sender == name ? \'right cyan\' : \'left\' ')
+            strong.cyan-text(ng-if='message.sender != name') {{message.sender}}:
             | {{message.text}}
       #input-area.row.white
         .input-field.col.s10
