@@ -1,3 +1,7 @@
+header {
+  z-index: 10;
+}
+
 .nav-wrapper {
   padding: 0 30px;
 }
@@ -7,6 +11,7 @@
 }
 
 #main-footer {
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -18,4 +23,13 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+main .row {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+main .row .col {
+  height: 100%;
 }
