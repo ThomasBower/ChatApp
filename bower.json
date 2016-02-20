@@ -1,0 +1,23 @@
+{
+  "name": "ChatApp",
+  "description": "Chat App produced at ICHack 2016.",
+  "main": "index.js",
+  "authors": [
+    "Tencho Tenev <tenev.dev@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ThomasBower/ChatApp",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.5"
+  }
+}
