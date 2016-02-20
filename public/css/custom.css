@@ -2,6 +2,10 @@ header {
   z-index: 10;
 }
 
+.under-header {
+    margin-top: 80px;
+}
+
 .nav-wrapper {
   padding: 0 30px;
 }
@@ -82,4 +86,4 @@ main > .row > .col {
 #input-area input[type=submit] {
   height: 100%;
   width: 100%;
-} 
+}

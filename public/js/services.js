@@ -21,4 +21,18 @@ app.factory('socket', function($rootScope) {
             })
         }
     };
+}).factory('userService', function(){
+    var user = {
+        name: 'Guest',
+        points: 0
+    }
+
+    return {
+        getUser: function(){
+            return user
+        },
+        setName: function(name){
+            user.name = name
+        }
+    }
 })
