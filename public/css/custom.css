@@ -44,6 +44,10 @@ main .row .col {
 }
 
 #chat > ol li {
+  font-weight: normal;
   line-height: 1.8em;
   font-size: 1.2em;
+  display: block;
+  clear: both;
+  margin-bottom: 5px;
 }
